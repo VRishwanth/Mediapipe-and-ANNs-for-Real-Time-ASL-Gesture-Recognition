@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hand 2 Text</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body class="bg-[#0f172a] text-white font-sans flex flex-col min-h-screen">
+  <header class="flex items-center justify-between px-4 py-2 bg-[#0f172a] border-b border-[#1e293b]">
+    <div class="flex items-center space-x-2">
+      <i class="fas fa-hand-paper text-[#3b82f6] text-xl"></i>
+      <h1 class="text-[#a855f7] text-xl font-bold">Hand 2 Text</h1>
+    </div>
+    <button id="start-btn" class="bg-[#1e40af] px-4 py-2 rounded hover:bg-[#1e3a8a]">Start</button>
+  </header>
+
+  <main class="flex-grow p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <video id="webcam" autoplay playsinline muted class="bg-[#111827] rounded w-full h-auto"></video>
+
+    <div class="flex flex-col">
+      <label class="font-semibold mb-1">Detected Letters</label>
+      <textarea id="detected-letters" readonly class="flex-grow bg-[#1e293b] rounded p-3 font-mono resize-none"></textarea>
+      <div class="mt-2 text-right">
+        <button id="clear-btn" class="bg-[#334155] px-3 py-1 rounded hover:bg-[#475569] flex items-center">
+          <span>Clear</span><i class="fas fa-times ml-1"></i>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
