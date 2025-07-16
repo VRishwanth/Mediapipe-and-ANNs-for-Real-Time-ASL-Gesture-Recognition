@@ -1,6 +1,6 @@
 flask
 opencv-python
 numpy
-tensorflow
+tensorflow==2.10.0
 mediapipe
 scikit-learn
